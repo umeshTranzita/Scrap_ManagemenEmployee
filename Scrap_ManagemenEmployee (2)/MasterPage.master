@@ -1,0 +1,272 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SCRAP MANAGEMENT</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" href="lib/font-awesome/web-fonts-with-css/css/fontawesome-all.css" />
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="css/fontawesome-iconpicker.css" rel="stylesheet" />
+
+    <style>
+        .side-nav {
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+        }
+
+        #page-content {
+            margin-left: 300px;
+        }
+
+        nav {
+            height: 0px;
+        }
+
+        body nav {
+            height: 5px !important;
+            border-top: 5px solid #1473c3;
+        }
+
+        header {
+            display: none;
+        }
+
+        @media screen and (min-width: 0px) and (max-width: 768px) {
+            header {
+                display: block;
+            }
+
+            .side-nav {
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+
+            #page-content {
+                margin-left: 0px;
+            }
+
+            nav {
+                height: 56px;
+            }
+
+            body nav {
+                height: 56px !important;
+                border-top: none;
+            }
+        }
+    </style>
+
+</head>
+<body id="homepage">
+    <div class="preloading">
+        <div class="wrap-preload">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+
+        <header id="header">
+            <div class="nav-wrapper container">
+                <div class="header-menu-button">
+                    <a href="#" data-activates="nav-mobile-category" class="button-collapse" id="button-collapse-category">
+                        <div class="cst-btn-menu">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="header-logo">
+                    <%-- <a href="#" class="nav-logo">
+                        <img src="../img/logo_ForHeader.png" /></a>--%>
+                </div>
+            </div>
+
+
+        </header>
+        <nav>
+            <ul id="nav-mobile-category" class="side-nav">
+                <li class="profile">
+                    <div class="li-profile-info">
+                        <asp:Image runat="server" ID="ProfileImg" ImageUrl="~/img/AdminImage.png" />
+                        <h2>
+                            <asp:Label runat="server" ID="LblName"></asp:Label></h2>
+                        <div class="emailprofile">
+                            <asp:Label runat="server" ID="LblVendorName"></asp:Label>
+                        </div>
+                        <div class="SiteName">
+                            <asp:Label runat="server" ID="LblSiteName"></asp:Label>
+                        </div>
+
+                    </div>
+
+                </li>
+                <li>
+                    <a class="waves-effect waves-blue" href="dashboard.aspx"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <header class="main-header">
+                    <!-- Logo -->
+                    <a href="../Dashboard/Home.aspx" class="logo" style="background-color:#dd4b5">
+                        <span class="logo-mini"><b>P&G</b></span>
+                        <span class="logo-lg"><b>RDT - M</b></span>
+                    </a>
+                    <!-- Header Navbar: style can be found in header.less -->
+                    <nav class="navbar navbar-static-top" style="background-color:#3498DB">
+                        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"></a>
+                        <span class="top-logo-line hidden-sm hidden-xs">&nbsp; </span>
+
+                        <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown tasks-menu classhide">
+                                    <a>
+                                        <span style="color: white;"><b>WELCOME : </b></span>
+                                        <span id="spnUsername" runat="server" style="text-transform: uppercase"></span>
+                                    </a>
+                                </li>
+                                 
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+                <!-- Left side column. contains the logo and sidebar -->
+                <aside class="main-sidebar">
+                    <!-- sidebar: style can be found in sidebar.less -->
+                    <section class="sidebar" runat="server" id="Navigation">
+                    </section>
+                    <!-- /.sidebar -->
+                </aside>
+               <%-- <asp:Panel runat="server" ID="EmployeeLogin" Visible="false">
+
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-angle-double-right"></i>MASTERS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                        <ul id="submenu-1" class="collapse">
+                            <li><a href="DepartmentMaster.aspx"><i class="fa fa-angle-right"></i>Department Master</a></li>
+                            <li><a href="Frm_ScrapTypeMaster.aspx"><i class="fa fa-angle-right"></i>Scrap Master</a></li>
+                            <li><a href="Frm_ToleranceMaster.aspx"><i class="fa fa-angle-right"></i>Tolerance Master</a></li>
+                            <li><a href="Frm_AccessMaster.aspx"><i class="fa fa-angle-right"></i>Access Master</a></li>
+                            <li><a href="Frm_ContractorMaster.aspx"><i class="fa fa-angle-right"></i>Contractor Master</a></li>
+                            <li><a href="N_UMEmpRoleMap.aspx"><i class="fa fa-angle-right"></i>Um Master</a></li>
+                            <li><a href="N_UMRoleMaster.aspx"><i class="fa fa-angle-right"></i>Role Master</a></li>
+                            <li><a href="N_UMMODULEMaster.aspx"><i class="fa fa-angle-right"></i>Module Master</a></li>
+                            <li><a href="N_UMRoleFormMap.aspx.aspx"><i class="fa fa-angle-right"></i>Role Form Mapping</a></li>
+                            <li><a href="N_UMFormMaster.aspx"><i class="fa fa-angle-right"></i>Forms</a></li>
+                            <li><a href="N_UMMenuMaster.aspx"><i class="fa fa-angle-right"></i>Menu Master</a></li>
+                            <li><a href="N_UMMenuFormMap.aspx"><i class="fa fa-angle-right"></i>Menu Form Map</a></li>
+                            <li><a href="EmployeeMaster.aspx"><i class="fa fa-angle-right"></i>Employee Master</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-angle-double-right"></i>APPROVALS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                        <ul id="submenu-2" class="collapse">
+                            <li><a href="Frm_ReceiveApproval.aspx"><i class="fa fa-angle-right"></i>Scrap Receive Approval</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-angle-double-right"></i>REPORTS <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                        <ul id="submenu-3" class="collapse">
+                            <li><a href="Frm_CurrentStatusReport.aspx"><i class="fa fa-angle-right"></i>Scrap Status Report</a></li>
+                            <li><a href="Frm_PostProcessReport.aspx"><i class="fa fa-angle-right"></i>Post Process Report</a></li>
+                            <li><a href="Frm_IraReport.aspx"><i class="fa fa-angle-right"></i>IRA Report</a></li>
+                            <li><a href="Frm_LogHistory.aspx"><i class="fa fa-angle-right"></i>Log History Report</a></li>
+                        </ul>
+
+                    </li>
+                </asp:Panel>
+
+                <asp:Panel runat="server" ID="ContractorLoginDispatch" Visible="true">
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#submenu-4"><i class="fa fa-angle-double-right"></i>SCRAP <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                        <ul id="submenu-4" class="collapse">
+                            <li><a href="FrmScrapLoad.aspx"><i class="fa fa-angle-right"></i>Scrap Load</a></li>
+                            <li><a href="FRm_LoadedDetails.aspx"><i class="fa fa-angle-right"></i>Scrap Load List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Frm_DispatchedList.aspx"><i class="fa fa-angle-double-right"></i>Scrap Dispatch List </a>
+
+                    </li>
+                    <li>
+                        <a href="Frm_ScrapReceive.aspx"><i class="fa fa-angle-double-right"></i>Scrap Receive</a>
+                    </li>
+                    <li>
+                        <a href="Frm_ScrapIssue.aspx"><i class="fa fa-angle-double-right"></i>Scrap Issue</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#submenu-5"><i class="fa fa-angle-double-right"></i>Post Processing <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                        <ul id="submenu-5" class="collapse">
+                            <li><a href="Frm_PostProcessing.aspx"><i class="fa fa-angle-right"></i>Add P-Processed Data</a></li>
+                            <li><a href="Frm_ScrapSold.aspx"><i class="fa fa-angle-right"></i>Sale PP Bags</a></li>
+                            <li><a href="Frm_PostProcessLoad.aspx"><i class="fa fa-angle-right"></i>Load PP Bags</a></li>
+                            <li><a href="Frm_PostProcessDispatch.aspx"><i class="fa fa-angle-right"></i>Dispatch PP Bags</a></li>
+                        </ul>
+                    </li>
+
+                </asp:Panel>--%>
+
+            </ul>
+            <!-- END LEFT SIDENAV-->
+        </nav>
+        <div id="page-content">
+            <div class="register-form" style="padding-top: 20px;">
+                <div class="">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" style="background: none;">
+            <div class="container">
+                <div class="row copyright">
+                    Design & Developed by <span>SFA Technologies</span>.
+                </div>
+            </div>
+        </footer>
+         <script src="js/jquery.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/custom.js"></script>
+
+      <%--  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>--%>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <link href="css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <script src="js/select2.full.min.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+        <script src="js/fontawesome-iconpicker.js"></script>
+
+       <script type="text/javascript">
+            $('.select2').select2()
+            $(function () {
+                $('.datepicker').datepicker({
+                    autoclose: true
+                })
+            });
+            function showModal() {
+                // alert('2');
+                $('#basicExampleModal').modal('show');
+                //return false;
+            }
+            //$(document).ready(function () {
+            //    $('.datatable1').DataTable();
+            //});
+
+
+        </script>
+
+
+
+
+    </form>
+
+</body>
+</html>

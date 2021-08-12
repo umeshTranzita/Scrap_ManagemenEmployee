@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IraDataset" targetNamespace="http://tempuri.org/IraDataset.xsd" xmlns:mstns="http://tempuri.org/IraDataset.xsd" xmlns="http://tempuri.org/IraDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IraDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="IraDataset" msprop:Generator_UserDSName="IraDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsIRA" msprop:Generator_TableClassName="dsIRADataTable" msprop:Generator_TableVarName="tabledsIRA" msprop:Generator_RowChangedName="dsIRARowChanged" msprop:Generator_TablePropName="dsIRA" msprop:Generator_RowDeletingName="dsIRARowDeleting" msprop:Generator_RowChangingName="dsIRARowChanging" msprop:Generator_RowEvHandlerName="dsIRARowChangeEventHandler" msprop:Generator_RowDeletedName="dsIRARowDeleted" msprop:Generator_RowClassName="dsIRARow" msprop:Generator_UserTableName="dsIRA" msprop:Generator_RowEvArgName="dsIRARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueConsigment" msprop:Generator_ColumnVarNameInTable="columnIssueConsigment" msprop:Generator_ColumnPropNameInRow="IssueConsigment" msprop:Generator_ColumnPropNameInTable="IssueConsigmentColumn" msprop:Generator_UserColumnName="IssueConsigment" type="xs:string" minOccurs="0" />
+              <xs:element name="IssueBag" msprop:Generator_ColumnVarNameInTable="columnIssueBag" msprop:Generator_ColumnPropNameInRow="IssueBag" msprop:Generator_ColumnPropNameInTable="IssueBagColumn" msprop:Generator_UserColumnName="IssueBag" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalBag" msprop:Generator_ColumnVarNameInTable="columnTotalBag" msprop:Generator_ColumnPropNameInRow="TotalBag" msprop:Generator_ColumnPropNameInTable="TotalBagColumn" msprop:Generator_UserColumnName="TotalBag" type="xs:string" minOccurs="0" />
+              <xs:element name="IssueWeight" msprop:Generator_ColumnVarNameInTable="columnIssueWeight" msprop:Generator_ColumnPropNameInRow="IssueWeight" msprop:Generator_ColumnPropNameInTable="IssueWeightColumn" msprop:Generator_UserColumnName="IssueWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalWeight" msprop:Generator_ColumnVarNameInTable="columnTotalWeight" msprop:Generator_ColumnPropNameInRow="TotalWeight" msprop:Generator_ColumnPropNameInTable="TotalWeightColumn" msprop:Generator_UserColumnName="TotalWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="SumOfIssueWeight" msprop:Generator_ColumnVarNameInTable="columnSumOfIssueWeight" msprop:Generator_ColumnPropNameInRow="SumOfIssueWeight" msprop:Generator_ColumnPropNameInTable="SumOfIssueWeightColumn" msprop:Generator_UserColumnName="SumOfIssueWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="IssueDate" msprop:Generator_ColumnVarNameInTable="columnIssueDate" msprop:Generator_ColumnPropNameInRow="IssueDate" msprop:Generator_ColumnPropNameInTable="IssueDateColumn" msprop:Generator_UserColumnName="IssueDate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsProccesing" msprop:Generator_TableClassName="dsProccesingDataTable" msprop:Generator_TableVarName="tabledsProccesing" msprop:Generator_TablePropName="dsProccesing" msprop:Generator_RowDeletingName="dsProccesingRowDeleting" msprop:Generator_RowChangingName="dsProccesingRowChanging" msprop:Generator_RowEvHandlerName="dsProccesingRowChangeEventHandler" msprop:Generator_RowDeletedName="dsProccesingRowDeleted" msprop:Generator_UserTableName="dsProccesing" msprop:Generator_RowChangedName="dsProccesingRowChanged" msprop:Generator_RowEvArgName="dsProccesingRowChangeEvent" msprop:Generator_RowClassName="dsProccesingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProcConsigment" msprop:Generator_ColumnVarNameInTable="columnProcConsigment" msprop:Generator_ColumnPropNameInRow="ProcConsigment" msprop:Generator_ColumnPropNameInTable="ProcConsigmentColumn" msprop:Generator_UserColumnName="ProcConsigment" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalProcBag" msprop:Generator_ColumnVarNameInTable="columnTotalProcBag" msprop:Generator_ColumnPropNameInRow="TotalProcBag" msprop:Generator_ColumnPropNameInTable="TotalProcBagColumn" msprop:Generator_UserColumnName="TotalProcBag" type="xs:string" minOccurs="0" />
+              <xs:element name="CoreBag" msprop:Generator_ColumnVarNameInTable="columnCoreBag" msprop:Generator_ColumnPropNameInRow="CoreBag" msprop:Generator_ColumnPropNameInTable="CoreBagColumn" msprop:Generator_UserColumnName="CoreBag" type="xs:string" minOccurs="0" />
+              <xs:element name="ScrapBag" msprop:Generator_ColumnVarNameInTable="columnScrapBag" msprop:Generator_ColumnPropNameInRow="ScrapBag" msprop:Generator_ColumnPropNameInTable="ScrapBagColumn" msprop:Generator_UserColumnName="ScrapBag" type="xs:string" minOccurs="0" />
+              <xs:element name="CoreWeight" msprop:Generator_ColumnVarNameInTable="columnCoreWeight" msprop:Generator_ColumnPropNameInRow="CoreWeight" msprop:Generator_ColumnPropNameInTable="CoreWeightColumn" msprop:Generator_UserColumnName="CoreWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="ScrapWeight" msprop:Generator_ColumnVarNameInTable="columnScrapWeight" msprop:Generator_ColumnPropNameInRow="ScrapWeight" msprop:Generator_ColumnPropNameInTable="ScrapWeightColumn" msprop:Generator_UserColumnName="ScrapWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalProcWeight" msprop:Generator_ColumnVarNameInTable="columnTotalProcWeight" msprop:Generator_ColumnPropNameInRow="TotalProcWeight" msprop:Generator_ColumnPropNameInTable="TotalProcWeightColumn" msprop:Generator_UserColumnName="TotalProcWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="ProcDate" msprop:Generator_ColumnVarNameInTable="columnProcDate" msprop:Generator_ColumnPropNameInRow="ProcDate" msprop:Generator_ColumnPropNameInTable="ProcDateColumn" msprop:Generator_UserColumnName="ProcDate" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalSumOfIssueWeight" msprop:Generator_ColumnVarNameInTable="columnTotalSumOfIssueWeight" msprop:Generator_ColumnPropNameInRow="TotalSumOfIssueWeight" msprop:Generator_ColumnPropNameInTable="TotalSumOfIssueWeightColumn" msprop:Generator_UserColumnName="TotalSumOfIssueWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="ConversionLoss" msprop:Generator_ColumnVarNameInTable="columnConversionLoss" msprop:Generator_ColumnPropNameInRow="ConversionLoss" msprop:Generator_ColumnPropNameInTable="ConversionLossColumn" msprop:Generator_UserColumnName="ConversionLoss" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
